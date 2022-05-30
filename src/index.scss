@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply bg-slate-900 px-5 font-body text-white;
+  }
+}
+@layer components {
+  .page-container {
+    max-width: 1100px;
+    @apply mx-auto;
+  }
+  .movie-list .swiper-slide {
+    width: 270px;
+    height: auto;
+    color: white;
+  }
+  .banner .swiper {
+    height: 100%;
+  }
+}
+.skele404 {
+  background-color: #eee;
+  background-image: linear-gradient(
+    110deg,
+    #08b4d5 8%,
+    #72a4f5 18%,
+    #08b4d5 33%
+  );
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+// pagination
+.paginate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  .selected {
+    @apply text-pink;
+  }
+}
